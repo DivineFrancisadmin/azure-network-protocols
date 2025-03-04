@@ -37,7 +37,7 @@ To begin the lab, I first create a Resource Group in the Azure Portal to organiz
 <br />
 
 <p>
-  Monitor Network Traffic with Wireshark
+Monitor Network Traffic with Wireshark
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
@@ -46,11 +46,17 @@ Once my virtual machines are running, I use Remote Desktop to connect to the Win
 <br />
 
 <p>
-  Configure and Test Firewall Rules (NSG)
+Configure and Test Firewall Rules (NSG)
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
+With network traffic monitoring in place, I test how firewall rules impact communication. I initiate a continuous ping from the Windows 10 VM to the Ubuntu VM. Then, I navigate to the Azure Portal, locate the Network Security Group (NSG) assigned to the Ubuntu VM, and disable inbound ICMP traffic by creating a rule that blocks it. Returning to Wireshark and the command line, I observe that the ping requests stop receiving replies, indicating the firewall rule is working as expected. To restore connectivity, I re-enable ICMP traffic in the NSG and confirm that the pings resume successfully.</p>
 <br />
+<p>
+Analyze Different Network Protocols in Wireshark
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Next, I use Wireshark to analyze different network protocols. I filter for SSH traffic and initiate an SSH session from the Windows VM to the Ubuntu VM using its private IP address (ssh labuser@<private IP>). As I enter commands in the Linux terminal, I observe SSH packets being captured. Then, I filter for DHCP traffic and renew my Windows 10 VM's IP address by running ipconfig /renew in PowerShell. Wireshark captures the DHCP request and response, showing how the VM acquires a new IP. Similarly, I analyze DNS traffic by using the nslookup command to find the IP addresses of google.com and disney.com, observing DNS query and response packets. Finally, I filter for RDP traffic (port 3389) and notice constant packet activity, confirming that Remote Desktop continuously transmits data to provide a live session.
