@@ -30,7 +30,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <p>
 Create Virtual Machines and Network Setup
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1258" alt="Screenshot 2025-03-12 at 9 53 41 PM" src="https://github.com/user-attachments/assets/2a937181-71aa-4796-a0d9-6d308feb92e5" />
 </p>
 <p>
 To begin the lab, I first create a Resource Group in the Azure Portal to organize all related resources. Next, I deploy a Windows 10 Virtual Machine (VM), ensuring that it creates a new Virtual Network (VNet) and Subnet for communication. Once the Windows VM is set up, I proceed to create a Linux (Ubuntu) VM, making sure that it is in the same Resource Group and Virtual Network as the Windows VM. This setup ensures both machines can communicate internally without requiring external internet access.</p>
