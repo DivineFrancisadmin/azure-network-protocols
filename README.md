@@ -48,7 +48,7 @@ Once my virtual machines are running, I use Remote Desktop to connect to the Win
 <p>
 Configure and Test Firewall Rules (NSG)
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="464" alt="Screenshot 2025-03-12 at 9 55 58 PM" src="https://github.com/user-attachments/assets/5c8947ac-c330-4f9c-b09b-33487fe4998a" />
 </p>
 <p>
 With network traffic monitoring in place, I test how firewall rules impact communication. I initiate a continuous ping from the Windows 10 VM to the Ubuntu VM. Then, I navigate to the Azure Portal, locate the Network Security Group (NSG) assigned to the Ubuntu VM, and disable inbound ICMP traffic by creating a rule that blocks it. Returning to Wireshark and the command line, I observe that the ping requests stop receiving replies, indicating the firewall rule is working as expected. To restore connectivity, I re-enable ICMP traffic in the NSG and confirm that the pings resume successfully.</p>
