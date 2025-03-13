@@ -56,7 +56,7 @@ With network traffic monitoring in place, I test how firewall rules impact commu
 <p>
 Analyze Different Network Protocols in Wireshark
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1270" alt="Screenshot 2025-03-12 at 9 56 58 PM" src="https://github.com/user-attachments/assets/15daee5c-4cdc-42ba-950f-0ece263eae82" />
 </p>
 <p>
 Next, I use Wireshark to analyze different network protocols. I filter for SSH traffic and initiate an SSH session from the Windows VM to the Ubuntu VM using its private IP address (ssh labuser@<private IP>). As I enter commands in the Linux terminal, I observe SSH packets being captured. Then, I filter for DHCP traffic and renew my Windows 10 VM's IP address by running ipconfig /renew in PowerShell. Wireshark captures the DHCP request and response, showing how the VM acquires a new IP. Similarly, I analyze DNS traffic by using the nslookup command to find the IP addresses of google.com and disney.com, observing DNS query and response packets. Finally, I filter for RDP traffic (port 3389) and notice constant packet activity, confirming that Remote Desktop continuously transmits data to provide a live session.
