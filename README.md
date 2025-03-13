@@ -39,7 +39,7 @@ To begin the lab, I first create a Resource Group in the Azure Portal to organiz
 <p>
 Monitor Network Traffic with Wireshark
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1253" alt="Screenshot 2025-03-12 at 9 55 09 PM" src="https://github.com/user-attachments/assets/c6f3b1b4-b23e-41b4-be6b-c200f7d7e1ce" />
 </p>
 <p>
 Once my virtual machines are running, I use Remote Desktop to connect to the Windows 10 VM. The first step is to install Wireshark, a network protocol analyzer, which will allow me to inspect network traffic in real time. After installation, I start a packet capture in Wireshark and filter for ICMP traffic. To generate ICMP traffic, I retrieve the private IP address of the Ubuntu VM and attempt to ping it from the Windows 10 VM. I observe the ping requests and replies appearing in Wireshark. Additionally, I open PowerShell or Command Prompt and attempt to ping a public website (e.g., www.google.com) to analyze outbound ICMP traffic.</p>
